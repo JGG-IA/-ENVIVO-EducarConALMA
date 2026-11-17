@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grabaciones · Educar con alma</title>
+<meta name="description" content="Grabaciones del 1er Congreso sobre Familia y Crianza Católica · Educar con alma.">
+<meta property="og:title" content="Grabaciones · Educar con alma">
+<meta property="og:description" content="Revive las conferencias del 1er Congreso sobre Familia y Crianza Católica.">
+<meta property="og:image" content="https://img.youtube.com/vi/bgY6x1AuhCQ/maxresdefault.jpg">
+<meta name="theme-color" content="#0B1C38">
+<link rel="icon" href="__IMG_emblema__">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#13294D; --navy-deep:#0B1C38; --gold:#C9973F; --gold-dark:#A47726; --gold-light:#EFD08E;
+  --cream:#FBF6EC; --cream-dark:#F2E7CF; --red:#E0352B;
+  --gold-grad:linear-gradient(180deg,#F6E1A6 0%,#DDB467 45%,#C9973F 75%,#B3862F 100%);
+  --gold-text:linear-gradient(100deg,#B3862F 0%,#E2B866 25%,#FFF1C9 40%,#C9973F 55%,#9E7224 100%);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Montserrat",system-ui,sans-serif;
+  --shadow:0 24px 60px rgba(0,0,0,.35),0 4px 14px rgba(0,0,0,.2);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(ellipse at 50% 0%,#24457C 0%,var(--navy) 35%,var(--navy-deep) 75%) fixed var(--navy-deep)}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{width:min(1100px,100% - 32px);margin-inline:auto}
+.gold{background:var(--gold-text);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{0%{background-position:100% 0}100%{background-position:-150% 0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+#sparks{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+main,header,footer,.marquee{position:relative;z-index:1}
+
+.marquee{background:rgba(0,0,0,.35);border-bottom:2px solid var(--gold);overflow:hidden;white-space:nowrap}
+.marquee div{display:inline-flex;gap:34px;padding:9px 0;animation:mq 30s linear infinite;font-weight:800;font-size:12px;letter-spacing:.22em;color:var(--gold-light)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+header{padding:20px 0 6px;text-align:center}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.back{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;border:2px solid rgba(239,208,142,.45);font-weight:700;font-size:13px;transition:.25s}
+.back:hover{border-color:var(--gold);background:rgba(201,151,63,.15)}
+.invite{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:12px;letter-spacing:.2em;color:var(--gold-light)}
+.invite img{width:42px;height:42px;border-radius:50%;border:2px solid var(--gold)}
+.invite b{color:#fff}
+.brand{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px}
+.brand .em{width:78px;height:78px;border-radius:50%;background:var(--cream);border:3px solid var(--gold);display:grid;place-items:center;overflow:hidden;flex:none;box-shadow:0 0 30px rgba(239,208,142,.35)}
+.brand .em img{width:66px;mix-blend-mode:multiply}
+.brand h1{font-family:var(--serif);font-weight:900;font-size:clamp(32px,5.6vw,54px);line-height:1;text-align:left}
+.brand p{font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(14px,2vw,19px);margin-top:4px}
+.hero-t{margin:22px 0 18px}
+.hero-t small{display:block;font-weight:800;letter-spacing:.3em;font-size:12px;color:var(--gold-light)}
+.hero-t h2{font-family:var(--serif);font-weight:900;font-size:clamp(30px,5vw,50px);line-height:1.05;margin-top:6px}
+.hero-t h2 em{font-style:italic;font-weight:700}
+
+/* reproductor */
+.player{position:relative;aspect-ratio:16/9;max-width:min(940px,100%);margin:0 auto;border-radius:24px;overflow:hidden;border:4px solid var(--gold);
+  box-shadow:0 0 0 8px rgba(201,151,63,.15),var(--shadow);background:#000}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cover{position:absolute;inset:0;cursor:pointer;display:grid;place-items:center;background-size:cover;background-position:center;isolation:isolate}
+.cover:before{content:"";position:absolute;inset:0;background:radial-gradient(circle,rgba(11,28,56,.25) 0%,rgba(11,28,56,.8) 75%);z-index:-1}
+.cover .hint{position:absolute;left:0;right:0;bottom:clamp(12px,3.5vw,30px);text-align:center;font-weight:900;font-size:clamp(12px,2.4vw,20px);letter-spacing:.12em;
+  text-shadow:0 2px 12px rgba(0,0,0,.6);animation:bob 1.6s ease-in-out infinite}
+.cover .hint span{color:var(--gold-light)}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.play{position:relative;width:clamp(84px,18vw,160px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:var(--gold-grad);border:5px solid #FFF1C9;
+  box-shadow:0 0 50px rgba(239,208,142,.7),0 16px 40px rgba(0,0,0,.5);animation:beat 1.2s ease-in-out infinite}
+.play svg{width:46%;margin-left:9%}
+.play .ring{position:absolute;inset:-5px;border-radius:50%;border:4px solid var(--gold-light);animation:ripple 2.1s ease-out infinite}
+.play .ring:nth-child(2){animation-delay:.7s}.play .ring:nth-child(3){animation-delay:1.4s}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.09)}30%{transform:scale(.98)}45%{transform:scale(1.05)}}
+@keyframes ripple{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+.hand{position:absolute;font-size:clamp(38px,7vw,68px);right:-26%;bottom:-34%;animation:tap 1.2s ease-in-out infinite;filter:drop-shadow(0 6px 10px rgba(0,0,0,.45))}
+@keyframes tap{0%,100%{transform:translate(12px,14px) rotate(-18deg)}35%{transform:translate(-4px,-4px) rotate(-18deg) scale(.92)}}
+
+/* datos del video actual */
+.current{max-width:min(940px,100%);margin:16px auto 0;display:flex;align-items:center;gap:16px;background:var(--cream);color:var(--navy);border-radius:22px;padding:14px 20px;
+  border:2px solid var(--gold-light);box-shadow:var(--shadow)}
+.current .num{flex:none;width:58px;height:58px;border-radius:16px;background:var(--gold-grad);display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:30px}
+.current small{font-weight:800;font-size:11px;letter-spacing:.2em;color:var(--gold-dark)}
+.current h3{font-family:var(--serif);font-weight:900;font-size:clamp(20px,3vw,28px);line-height:1.1;margin:2px 0}
+.current p{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold-dark)}
+.current .who{display:inline-flex;align-items:center;gap:8px;margin-top:6px;background:var(--navy);color:var(--gold-light);font-weight:800;font-size:13px;padding:5px 14px 5px 5px;border-radius:999px}
+.current .who img{width:28px;height:28px;border-radius:50%;object-fit:cover}
+
+/* lista */
+section{padding:clamp(40px,6vw,64px) 0 0}
+.kicker{display:block;text-align:center;font-weight:800;letter-spacing:.3em;font-size:12px;color:var(--gold-light);margin-bottom:8px}
+h2.sec{font-family:var(--serif);font-weight:900;font-size:clamp(28px,4.6vw,44px);text-align:center;line-height:1.05;margin-bottom:26px}
+h2.sec em{font-style:italic;font-weight:700}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:18px}
+.vid{position:relative;text-align:left;background:var(--cream);color:var(--navy);border-radius:22px;overflow:hidden;border:2px solid var(--gold-light);box-shadow:var(--shadow);
+  transition:transform .35s cubic-bezier(.2,1.4,.4,1),border-color .3s,box-shadow .3s;opacity:0;transform:translateY(36px)}
+.vid.in{opacity:1;transform:none}
+.vid:hover{transform:translateY(-6px) scale(1.02);border-color:var(--gold)}
+.vid .th{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden}
+.vid .th img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.vid:hover .th img{transform:scale(1.07)}
+.vid .th:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(11,28,56,.75))}
+.vid .n{position:absolute;top:10px;left:10px;z-index:2;width:42px;height:42px;border-radius:12px;background:var(--gold-grad);display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:22px;color:var(--navy);box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.vid .d{position:absolute;right:10px;bottom:10px;z-index:2;background:rgba(0,0,0,.75);color:#fff;font-weight:800;font-size:12px;padding:4px 9px;border-radius:8px}
+.vid .mini{position:absolute;left:50%;top:50%;z-index:2;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:var(--gold-grad);display:grid;place-items:center;
+  opacity:0;transform:scale(.6);transition:.3s;box-shadow:0 0 30px rgba(239,208,142,.7)}
+.vid .mini svg{width:42%;margin-left:8%}
+.vid:hover .mini{opacity:1;transform:scale(1)}
+.vid .tx{padding:14px 16px 16px}
+.vid h4{font-family:var(--serif);font-weight:900;font-size:21px;line-height:1.12}
+.vid p{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--gold-dark);margin-top:3px;line-height:1.3}
+.vid .who{display:inline-flex;align-items:center;gap:7px;margin-top:10px;background:var(--navy);color:var(--gold-light);font-weight:800;font-size:12px;padding:4px 12px 4px 4px;border-radius:999px}
+.vid .who img{width:24px;height:24px;border-radius:50%;object-fit:cover}
+.vid .who i{width:24px;height:24px;border-radius:50%;background:var(--gold-grad);display:grid;place-items:center;font-style:normal;color:var(--navy);font-size:13px;font-weight:900}
+.vid .now{position:absolute;top:10px;right:10px;z-index:2;display:none;align-items:center;gap:6px;background:var(--red);color:#fff;font-weight:900;font-size:10px;letter-spacing:.14em;padding:5px 10px;border-radius:999px}
+.vid.active{border:3px solid var(--gold);box-shadow:0 0 0 5px rgba(201,151,63,.35),var(--shadow)}
+.vid.active .now{display:inline-flex}
+.dot{width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.25}}
+
+.yt{display:flex;justify-content:center;margin-top:22px}
+.yt a{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;border:2px solid rgba(239,208,142,.45);font-weight:700;font-size:14px;transition:.25s}
+.yt a:hover{border-color:var(--gold);background:rgba(201,151,63,.15)}
+.yt svg{width:20px;height:20px}
+
+/* aviso emergente */
+.modal{position:fixed;inset:0;z-index:50;display:none;place-items:center;padding:16px;background:rgba(5,12,26,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.modal.on{display:grid;animation:fade .35s ease}
+@keyframes fade{from{opacity:0}}
+.box{position:relative;width:min(560px,100%);max-height:calc(100svh - 32px);overflow:auto;background:linear-gradient(180deg,var(--cream),#F4E9D2);color:var(--navy);border-radius:30px;
+  border:4px solid var(--gold);box-shadow:0 30px 90px rgba(0,0,0,.6);padding:34px 28px 26px;text-align:center;animation:pop .55s cubic-bezier(.2,1.5,.4,1)}
+@keyframes pop{from{opacity:0;transform:translateY(30px) scale(.9)}}
+.box:before{content:"";position:absolute;inset:8px;border:1.5px solid var(--gold-light);border-radius:22px;pointer-events:none}
+.box .x{position:absolute;top:14px;right:16px;width:36px;height:36px;border-radius:50%;background:var(--navy);color:var(--gold-light);font-size:22px;line-height:1;z-index:2}
+.box .ic{width:84px;height:84px;margin:0 auto 12px;border-radius:50%;background:var(--navy);border:4px solid var(--gold);display:grid;place-items:center;box-shadow:0 0 0 8px rgba(201,151,63,.18)}
+.box .ic svg{width:44px;height:44px}
+.box small{display:block;font-weight:900;font-size:12px;letter-spacing:.24em;color:var(--gold-dark)}
+.box h3{font-family:var(--serif);font-weight:900;font-size:clamp(24px,4.4vw,32px);line-height:1.1;margin:6px 0 12px}
+.box p{font-size:16px;line-height:1.55;font-weight:500}
+.box p b{font-weight:800}
+.box .hon{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--gold-dark);margin-top:10px}
+.box .wa{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:linear-gradient(180deg,#3BE27A,#25D366 45%,#128C4B);border:3px solid var(--gold);color:#fff;
+  font-weight:900;font-size:16px;letter-spacing:.04em;padding:14px 24px;border-radius:999px;box-shadow:0 12px 28px rgba(18,140,75,.4);transition:transform .25s}
+.box .wa:hover{transform:translateY(-2px) scale(1.03)}
+.box .wa svg{width:26px;height:26px}
+.box .ok{display:block;margin:14px auto 0;font-weight:800;font-size:14px;color:var(--navy);text-decoration:underline;text-underline-offset:4px}
+
+footer{margin-top:clamp(50px,8vw,90px);background:rgba(0,0,0,.25);border-top:2px solid var(--gold);text-align:center;padding:30px 16px 34px;font-size:13px;color:rgba(255,255,255,.7)}
+footer .vt{display:inline-flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2em;color:var(--gold-light);font-size:13px;margin-bottom:12px}
+footer .vt img{width:56px;height:56px;border-radius:50%}
+footer .credit{display:flex;align-items:center;justify-content:center;gap:12px;width:fit-content;margin:18px auto 0;padding:8px 18px 8px 10px;border-radius:999px;
+  border:1px solid rgba(201,151,63,.3);font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.8);transition:transform .25s,border-color .25s,box-shadow .25s}
+footer .credit img{height:40px;width:auto;filter:drop-shadow(0 0 8px rgba(0,200,255,.45))}
+footer .credit b{color:var(--gold-light)}
+footer .credit:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 0 22px rgba(0,200,255,.25)}
+
+@media (max-width:560px){.top{justify-content:center}.invite{font-size:10px;letter-spacing:.12em}.invite img{width:34px;height:34px}.brand{flex-direction:column;gap:10px}.brand h1,.brand p{text-align:center}
+  .current{padding:12px 14px;gap:12px}.current .num{width:46px;height:46px;font-size:24px;border-radius:12px}.hand{font-size:36px;right:-34%;bottom:-40%}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important}.vid{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="sparks"></canvas>
+<div class="marquee" aria-hidden="true"><div id="mq"></div></div>
+
+<header class="wrap">
+  <div class="top">
+    <a class="back" href="index.html">← Volver a la transmisión</a>
+    <div class="invite"><img src="__IMG_sello__" alt="Colegio Véritas"> EL COLEGIO <b>VÉRITAS</b> TE INVITA</div>
+  </div>
+  <div class="brand">
+    <div class="em"><img src="__IMG_emblema__" alt="Logo Educar con alma"></div>
+    <div>
+      <h1>Educar con <span class="gold">alma</span></h1>
+      <p><span class="gold">1er Congreso sobre Familia y Crianza Católica</span></p>
+    </div>
+  </div>
+  <div class="hero-t">
+    <small>GRABACIONES DEL CONGRESO</small>
+    <h2>Revive cada <em class="gold">momento</em></h2>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="player" id="player"></div>
+  <div class="current" id="current"></div>
+
+  <section>
+    <span class="kicker">TODAS LAS GRABACIONES</span>
+    <h2 class="sec">Elige qué quieres <em class="gold">ver</em></h2>
+    <div class="list" id="list"></div>
+    <div class="yt"><a href="https://www.youtube.com/playlist?list=__LIST__" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg>
+      Ver la lista completa en YouTube</a></div>
+  </section>
+</main>
+
+<!-- aviso de derechos de autor -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+  <div class="box">
+    <button class="x" id="mx" aria-label="Cerrar">×</button>
+    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#EFD08E" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M15 9.35a4 4 0 1 0 0 5.3"/></svg></div>
+    <small>AVISO IMPORTANTE</small>
+    <h3 id="mt">Este contenido está protegido por derechos de autor</h3>
+    <p>Si lo estás viendo es porque realizaste la <b>donación respectiva al Colegio Véritas</b>. ¡Gracias por apoyar nuestra misión!</p>
+    <p class="hon">En caso contrario, y en virtud de la honestidad, puedes hacer tu donación por WhatsApp.</p>
+    <a class="wa" href="https://wa.me/573004011900?text=__WAMSG__" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.5-.6-.6-1-1.2-1.2-1.6-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 2.2.9 2.6.7 3.1.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>
+      Donar por WhatsApp · +57 300 401 1900
+    </a>
+    <button class="ok" id="mok">Ya hice mi donación, continuar viendo</button>
+  </div>
+</div>
+
+<footer>
+  <div class="vt"><img src="__IMG_sello__" alt="">INVITA COLEGIO VÉRITAS</div>
+  <div><b style="color:var(--gold-light)">Educar con alma</b> · 1er Congreso sobre Familia y Crianza Católica · Teatro Valerio Antonio, Marinilla</div>
+  <a class="credit" href="https://jgg-ia.github.io/portafolio/" target="_blank" rel="noopener">
+    <img src="__IMG_jg__" alt="Logo JG"><span>Desarrollado por <b>Julián García</b></span>
+  </a>
+</footer>
+
+<script>
+const LIST = "__LIST__";
+const PH = { rodrigo: "__IMG_rodrigo__", wilson: "__IMG_wilson__", santiago: "__IMG_santiago__", yuliana: "__IMG_yuliana__" };
+const VIDEOS = [
+  { id: "XPZmllcO54k", t: "Santa Misa", s: "", who: "Padre Fabio Giraldo", ic: "✝", dur: "1:00:39" },
+  { id: "bgY6x1AuhCQ", t: "Lo que mi casa me enseñó", s: "Así me educaron en mi hogar: con el alma", who: "Rodrigo Jaramillo", ph: "rodrigo", dur: "1:03:11" },
+  { id: "fcCgA1S66x0", t: "Un ejemplo…", s: "", who: "Rodrigo Jaramillo", ph: "rodrigo", dur: "5:44" },
+  { id: "DBfT8bN55_E", t: "¿Para qué educamos?", s: "Principios antropológicos, teológicos y filosóficos de la educación", who: "Wilson Tamayo", ph: "wilson", dur: "1:23:33" },
+  { id: "IphPwV4U8XU", t: "¿Estamos criando bien?", s: "Aciertos y desaciertos de los modelos de crianza modernos", who: "Santiago Correa", ph: "santiago", dur: "1:27:23" },
+  { id: "GNX74ChUyxk", t: "Educar con alma", s: "Principios para una crianza católica en casa", who: "Yuliana Ramírez", ph: "yuliana", dur: "55:29" },
+  { id: "iSPkn_FwHZU", t: "Oración final", s: "", who: "Fredy Ossa", ic: "🙏", dur: "20:47" },
+];
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const whoHtml = v => `<span class="who">${v.ph ? `<img src="${PH[v.ph]}" alt="">` : `<i>${v.ic}</i>`}${v.who}</span>`;
+
+// ---- cinta ----
+const MQ = ["GRABACIONES", "EDUCAR CON ALMA", "1ER CONGRESO SOBRE FAMILIA Y CRIANZA CATÓLICA", "INVITA COLEGIO VÉRITAS", "GRACIAS POR ACOMPAÑARNOS"];
+document.getElementById("mq").innerHTML = [...MQ, ...MQ, ...MQ, ...MQ].map(t => `<span>${t}</span>`).join("");
+
+// ---- reproductor ----
+const player = document.getElementById("player"), cur = document.getElementById("current"), list = document.getElementById("list");
+let idx = 0;
+function cover(i) {
+  const v = VIDEOS[i];
+  player.innerHTML = `<div class="cover" role="button" tabindex="0" aria-label="Reproducir ${v.t}" style="background-image:url('https://img.youtube.com/vi/${v.id}/hqdefault.jpg')">
+    <div class="play"><span class="ring"></span><span class="ring"></span><span class="ring"></span>
+      <svg viewBox="0 0 24 24"><path d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5z" fill="#13294D"/></svg><span class="hand" aria-hidden="true">👆</span></div>
+    <div class="hint">TOCA AQUÍ PARA <span>VER LA GRABACIÓN</span></div></div>`;
+  const c = player.firstElementChild;
+  c.addEventListener("click", () => play(i));
+  c.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); play(i); } });
+}
+function play(i) {
+  const v = VIDEOS[i];
+  player.innerHTML = `<iframe src="https://www.youtube.com/embed/${v.id}?autoplay=1&rel=0&modestbranding=1&playsinline=1&list=${LIST}&index=${i + 1}"
+    title="${v.t}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>`;
+}
+function select(i, autoplay) {
+  idx = i;
+  const v = VIDEOS[i];
+  cur.innerHTML = `<div class="num">${i + 1}</div><div><small>GRABACIÓN ${i + 1} DE ${VIDEOS.length} · ${v.dur}</small><h3>${v.t}</h3>${v.s ? `<p>${v.s}</p>` : ""}${whoHtml(v)}</div>`;
+  document.querySelectorAll(".vid").forEach((el, k) => el.classList.toggle("active", k === i));
+  autoplay ? play(i) : cover(i);
+}
+
+// ---- lista ----
+VIDEOS.forEach((v, i) => {
+  const b = document.createElement("button");
+  b.className = "vid";
+  b.style.transitionDelay = (i % 3) * 0.08 + "s";
+  b.innerHTML = `<div class="th"><img loading="lazy" src="https://img.youtube.com/vi/${v.id}/hqdefault.jpg" alt=""><span class="n">${i + 1}</span>
+      <span class="now"><span class="dot"></span>EN PANTALLA</span><span class="d">${v.dur}</span>
+      <span class="mini"><svg viewBox="0 0 24 24"><path d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5z" fill="#13294D"/></svg></span></div>
+    <div class="tx"><h4>${v.t}</h4>${v.s ? `<p>${v.s}</p>` : ""}${whoHtml(v)}</div>`;
+  b.addEventListener("click", () => { select(i, true); player.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" }); });
+  list.appendChild(b);
+});
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll(".vid").forEach(n => io.observe(n));
+// ?v=3 abre directamente la grabación 3
+const q = parseInt(new URLSearchParams(location.search).get("v"), 10);
+select(q >= 1 && q <= VIDEOS.length ? q - 1 : 0, false);
+
+// ---- aviso de derechos de autor a los 30 s ----
+const modal = document.getElementById("modal");
+const close = () => modal.classList.remove("on");
+document.getElementById("mx").addEventListener("click", close);
+document.getElementById("mok").addEventListener("click", close);
+modal.addEventListener("click", e => { if (e.target === modal) close(); });
+addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+const AVISO_MS = (parseInt(new URLSearchParams(location.search).get("aviso"), 10) || 30) * 1000;
+setTimeout(() => modal.classList.add("on"), AVISO_MS);
+
+// ---- destellos ----
+const cv = document.getElementById("sparks"), cx = cv.getContext("2d"); let W, H, P = [];
+function size() { W = cv.width = innerWidth * devicePixelRatio; H = cv.height = innerHeight * devicePixelRatio; }
+size(); addEventListener("resize", size);
+for (let i = 0; i < 46; i++) P.push({ x: Math.random(), y: Math.random(), r: Math.random() * 2 + .5, v: Math.random() * .0008 + .0003, p: Math.random() * 6.28 });
+(function draw(t) {
+  cx.clearRect(0, 0, W, H);
+  for (const s of P) {
+    if (!reduce) { s.y -= s.v; if (s.y < -.02) { s.y = 1.02; s.x = Math.random(); } }
+    const a = .25 + .4 * Math.sin(t / 700 + s.p), x = s.x * W, y = s.y * H, r = s.r * devicePixelRatio;
+    cx.fillStyle = `rgba(239,208,142,${a})`; cx.beginPath(); cx.moveTo(x, y - r * 3); cx.lineTo(x + r, y); cx.lineTo(x, y + r * 3); cx.lineTo(x - r, y); cx.closePath(); cx.fill();
+  }
+  requestAnimationFrame(draw);
+})(0);
+</script>
+</body>
+</html>

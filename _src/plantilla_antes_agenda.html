@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transmisión en vivo · Educar con alma</title>
+<meta name="description" content="Transmisión en vivo del 1er Congreso sobre Familia y Crianza Católica · Educar con alma · Lunes 16 de noviembre.">
+<meta property="og:title" content="EN VIVO · Educar con alma">
+<meta property="og:description" content="Mira aquí la transmisión del 1er Congreso sobre Familia y Crianza Católica.">
+<meta property="og:image" content="https://img.youtube.com/vi/__VID__/maxresdefault.jpg">
+<meta name="theme-color" content="#0B1C38">
+<link rel="icon" href="__IMG_emblema__">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#13294D; --navy-deep:#0B1C38; --gold:#C9973F; --gold-dark:#A47726; --gold-light:#EFD08E;
+  --cream:#FBF6EC; --cream-dark:#F2E7CF; --red:#E0352B;
+  --gold-grad:linear-gradient(180deg,#F6E1A6 0%,#DDB467 45%,#C9973F 75%,#B3862F 100%);
+  --gold-text:linear-gradient(100deg,#B3862F 0%,#E2B866 25%,#FFF1C9 40%,#C9973F 55%,#9E7224 100%);
+  --serif:"Playfair Display",Georgia,serif; --sans:"Montserrat",system-ui,sans-serif;
+  --shadow:0 24px 60px rgba(0,0,0,.35),0 4px 14px rgba(0,0,0,.2);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:#fff;background:var(--navy-deep);overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(ellipse at 50% 0%,#24457C 0%,var(--navy) 35%,var(--navy-deep) 75%) fixed}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1100px,100% - 32px);margin-inline:auto}
+.gold{background:var(--gold-text);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{0%{background-position:100% 0}100%{background-position:-150% 0}}
+#sparks{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+main,header,footer{position:relative;z-index:1}
+
+/* ---------- encabezado ---------- */
+header{padding:22px 0 10px;text-align:center}
+.invite{display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:13px;letter-spacing:.24em;color:var(--gold-light)}
+.invite img{width:46px;height:46px;border-radius:50%;border:2px solid var(--gold)}
+.invite b{color:#fff}
+.brand{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:14px}
+.brand .em{width:84px;height:84px;border-radius:50%;background:var(--cream);border:3px solid var(--gold);display:grid;place-items:center;overflow:hidden;flex:none;box-shadow:0 0 30px rgba(239,208,142,.35)}
+.brand .em img{width:72px;mix-blend-mode:multiply}
+.brand h1{font-family:var(--serif);font-weight:900;font-size:clamp(34px,6vw,58px);line-height:1;text-align:left}
+.brand p{font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(15px,2.2vw,20px);margin-top:4px}
+
+/* estado: en vivo / cuenta regresiva */
+.status{display:flex;justify-content:center;margin:18px 0 16px}
+.live{display:inline-flex;align-items:center;gap:10px;background:var(--red);border-radius:999px;padding:9px 22px;font-weight:900;letter-spacing:.2em;font-size:14px;box-shadow:0 0 30px rgba(224,53,43,.55)}
+.dot{width:11px;height:11px;border-radius:50%;background:#fff;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.25}}
+.soon{display:flex;flex-direction:column;align-items:center;gap:10px}
+.soon small{font-weight:800;font-size:12px;letter-spacing:.26em;color:var(--gold-light)}
+.count{display:flex;gap:10px}
+.count div{background:rgba(255,255,255,.07);border:2px solid var(--gold);border-radius:14px;width:74px;padding:8px 0 6px;text-align:center}
+.count b{display:block;font-family:var(--serif);font-weight:900;font-size:30px;line-height:1;color:var(--gold-light)}
+.count span{font-size:10px;font-weight:800;letter-spacing:.18em;opacity:.8}
+
+/* ---------- reproductor ---------- */
+.player{position:relative;aspect-ratio:16/9;max-width:min(920px,100%);margin-inline:auto;border-radius:24px;overflow:hidden;border:4px solid var(--gold);box-shadow:0 0 0 8px rgba(201,151,63,.15),var(--shadow);background:#000}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cover{position:absolute;inset:0;cursor:pointer;display:grid;place-items:center;background-size:cover;background-position:center;isolation:isolate}
+.cover:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(11,28,56,.35) 0%,rgba(11,28,56,.82) 70%);z-index:-1}
+.cover .tag{position:absolute;top:16px;left:16px}
+.cover .hint{position:absolute;left:0;right:0;bottom:clamp(14px,4vw,34px);text-align:center;font-weight:900;font-size:clamp(14px,2.6vw,22px);letter-spacing:.14em;
+  text-shadow:0 2px 12px rgba(0,0,0,.6);animation:bob 1.6s ease-in-out infinite}
+.cover .hint span{color:var(--gold-light)}
+@keyframes bob{50%{transform:translateY(-6px)}}
+
+/* el botón de PLAY animado */
+.play{position:relative;width:clamp(110px,22vw,190px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;
+  background:var(--gold-grad);border:5px solid #FFF1C9;box-shadow:0 0 50px rgba(239,208,142,.7),0 16px 40px rgba(0,0,0,.5);
+  animation:beat 1.2s ease-in-out infinite;transition:transform .2s}
+.play svg{width:46%;margin-left:9%;filter:drop-shadow(0 3px 6px rgba(0,0,0,.25))}
+.play .ring{position:absolute;inset:-5px;border-radius:50%;border:4px solid var(--gold-light);animation:ripple 2.1s ease-out infinite;pointer-events:none}
+.play .ring:nth-child(2){animation-delay:.7s}.play .ring:nth-child(3){animation-delay:1.4s}
+.play .orbit{position:absolute;inset:-22px;border-radius:50%;border:3px dashed rgba(239,208,142,.7);animation:spin 9s linear infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.09)}30%{transform:scale(.98)}45%{transform:scale(1.05)}}
+@keyframes ripple{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.9);opacity:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cover:hover .play{animation-play-state:paused;transform:scale(1.12)}
+/* mano que toca el botón */
+.hand{position:absolute;font-size:clamp(46px,8vw,78px);right:-18%;bottom:-30%;transform-origin:30% 10%;animation:tap 1.2s ease-in-out infinite;filter:drop-shadow(0 6px 10px rgba(0,0,0,.45));pointer-events:none}
+@keyframes tap{0%,100%{transform:translate(12px,14px) rotate(-18deg)}35%{transform:translate(-4px,-4px) rotate(-18deg) scale(.92)}50%{transform:translate(-2px,-2px) rotate(-18deg)}}
+/* flechas hacia el botón */
+.arrows{position:absolute;top:50%;display:flex;gap:2px;transform:translateY(-50%)}
+.arrows.l{left:calc(50% - clamp(150px,26vw,250px))}.arrows.r{right:calc(50% - clamp(150px,26vw,250px));transform:translateY(-50%) scaleX(-1)}
+.arrows i{width:clamp(12px,2vw,18px);height:clamp(12px,2vw,18px);border-right:4px solid var(--gold-light);border-top:4px solid var(--gold-light);transform:rotate(45deg);animation:arr 1.2s infinite;opacity:.2}
+.arrows i:nth-child(2){animation-delay:.15s}.arrows i:nth-child(3){animation-delay:.3s}
+@keyframes arr{40%{opacity:1}100%{opacity:.2}}
+
+/* barra bajo el video */
+.tools{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:16px 0 4px}
+.tool{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;border:2px solid rgba(239,208,142,.45);font-weight:700;font-size:14px;cursor:pointer;background:rgba(255,255,255,.05);color:#fff;transition:.25s}
+.tool:hover{border-color:var(--gold);background:rgba(201,151,63,.15);transform:translateY(-2px)}
+.tool svg{width:18px;height:18px}
+.tips{text-align:center;font-size:14px;opacity:.8;margin-top:8px}
+
+/* ---------- secciones ---------- */
+section{padding:clamp(46px,7vw,80px) 0 0}
+.kicker{display:block;text-align:center;font-weight:800;letter-spacing:.3em;font-size:12px;color:var(--gold-light);margin-bottom:10px}
+h2{font-family:var(--serif);font-weight:900;font-size:clamp(30px,5vw,48px);text-align:center;line-height:1.05;margin-bottom:30px}
+h2 em{font-style:italic;font-weight:700}
+.talks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:16px}
+.talk{display:flex;gap:18px;align-items:center;background:var(--cream);color:var(--navy);border-radius:24px;padding:16px 20px 16px 16px;border:2px solid var(--gold-light);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.talk:before{content:attr(data-n);position:absolute;right:12px;top:-14px;font-family:var(--serif);font-weight:900;font-size:110px;color:var(--gold);opacity:.13;line-height:1}
+.talk img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);flex:none}
+.talk small{font-weight:800;font-size:11px;letter-spacing:.22em;color:var(--gold-dark)}
+.talk h3{font-family:var(--serif);font-weight:900;font-size:24px;line-height:1.1;margin:3px 0 4px}
+.talk p{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold-dark);line-height:1.3}
+.talk .who{display:inline-block;margin-top:8px;background:var(--navy);color:var(--gold-light);font-weight:800;font-size:13px;padding:5px 14px;border-radius:999px}
+
+.share{margin:0 auto;max-width:760px;text-align:center;background:rgba(255,255,255,.05);border:2px solid rgba(239,208,142,.35);border-radius:28px;padding:30px 24px}
+.share p{font-family:var(--serif);font-style:italic;font-size:20px;margin-bottom:18px}
+.wa{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(180deg,#3BE27A,#25D366 45%,#128C4B);border:3px solid var(--gold);color:#fff;font-weight:900;letter-spacing:.06em;padding:16px 30px;border-radius:999px;box-shadow:0 14px 34px rgba(18,140,75,.45);transition:transform .25s}
+.wa:hover{transform:translateY(-3px) scale(1.03)}
+.wa svg{width:28px;height:28px}
+
+footer{margin-top:clamp(50px,8vw,90px);background:rgba(0,0,0,.25);border-top:2px solid var(--gold);text-align:center;padding:30px 16px 34px;font-size:13px;color:rgba(255,255,255,.7)}
+footer .vt{display:inline-flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2em;color:var(--gold-light);font-size:13px;margin-bottom:12px}
+footer .vt img{width:56px;height:56px;border-radius:50%}
+footer .credit{display:flex;align-items:center;justify-content:center;gap:12px;width:fit-content;margin:18px auto 0;padding:8px 18px 8px 10px;border-radius:999px;
+  border:1px solid rgba(201,151,63,.3);font-size:12px;letter-spacing:.08em;color:rgba(255,255,255,.8);transition:transform .25s,border-color .25s,box-shadow .25s}
+footer .credit img{height:40px;width:auto;filter:drop-shadow(0 0 8px rgba(0,200,255,.45))}
+footer .credit b{color:var(--gold-light)}
+footer .credit:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 0 22px rgba(0,200,255,.25)}
+
+@media (max-width:560px){.invite{font-size:10px;letter-spacing:.14em;white-space:nowrap;gap:8px}.invite img{width:36px;height:36px}.play{width:86px;border-width:4px}.play .orbit{inset:-14px}.hand{font-size:40px;right:-30%;bottom:-38%}.cover .hint{font-size:12px;letter-spacing:.08em;bottom:10px}.arrows.l{left:calc(50% - 120px)}.arrows.r{right:calc(50% - 120px)}.brand{flex-direction:column;gap:10px}.brand h1,.brand p{text-align:center}.count div{width:64px}.cover .tag{top:10px;left:10px}.cover .tag .live{padding:6px 14px;font-size:11px}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important}}
+</style>
+</head>
+<body>
+<canvas id="sparks"></canvas>
+
+<header class="wrap">
+  <div class="invite"><img src="__IMG_sello__" alt="Colegio Véritas"> EL COLEGIO <b>VÉRITAS</b> TE INVITA</div>
+  <div class="brand">
+    <div class="em"><img src="__IMG_emblema__" alt="Logo Educar con alma"></div>
+    <div>
+      <h1>Educar con <span class="gold">alma</span></h1>
+      <p><span class="gold">1er Congreso sobre Familia y Crianza Católica</span></p>
+    </div>
+  </div>
+  <div class="status" id="status"></div>
+</header>
+
+<main class="wrap">
+  <!-- REPRODUCTOR -->
+  <div class="player" id="player">
+    <div class="cover" id="cover" role="button" tabindex="0" aria-label="Reproducir la transmisión"
+         style="background-image:url('https://img.youtube.com/vi/__VID__/maxresdefault.jpg')">
+      <div class="tag" id="tag"></div>
+      <div class="arrows l" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="play">
+        <span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="orbit"></span>
+        <svg viewBox="0 0 24 24"><path d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5z" fill="#13294D"/></svg>
+        <span class="hand" aria-hidden="true">👆</span>
+      </div>
+      <div class="arrows r" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="hint">TOCA AQUÍ PARA <span>VER LA TRANSMISIÓN</span></div>
+    </div>
+  </div>
+
+  <div class="tools">
+    <button class="tool" id="fs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>Pantalla completa</button>
+    <a class="tool" href="https://youtu.be/__VID__" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg>Abrir en YouTube</a>
+  </div>
+  <p class="tips">¿No escuchas? Revisa que el video tenga el sonido activado 🔊 · Si se detiene, recarga la página.</p>
+
+  <!-- PROGRAMA -->
+  <section>
+    <span class="kicker">PROGRAMA</span>
+    <h2>Conferencias de <em class="gold">hoy</em></h2>
+    <div class="talks">
+      <article class="talk" data-n="01"><img src="__IMG_rodrigo__" alt=""><div><small>CONFERENCIA 1</small><h3>Lo que mi casa me enseñó</h3><p>Así me educaron en mi hogar: con el alma</p><span class="who">Rodrigo Jaramillo</span></div></article>
+      <article class="talk" data-n="02"><img src="__IMG_wilson__" alt=""><div><small>CONFERENCIA 2</small><h3>¿Para qué educamos?</h3><p>Principios antropológicos, teológicos y filosóficos de la educación</p><span class="who">Wilson Tamayo</span></div></article>
+      <article class="talk" data-n="03"><img src="__IMG_santiago__" alt=""><div><small>CONFERENCIA 3</small><h3>¿Estamos criando bien?</h3><p>Aciertos y desaciertos de los modelos de crianza modernos</p><span class="who">Santiago Correa</span></div></article>
+      <article class="talk" data-n="04"><img src="__IMG_yuliana__" alt=""><div><small>CONFERENCIA 4</small><h3>Educar con alma</h3><p>Principios para una crianza católica en casa</p><span class="who">Yuliana Ramírez</span></div></article>
+    </div>
+  </section>
+
+  <!-- COMPARTIR -->
+  <section>
+    <div class="share">
+      <span class="kicker">INVITA A OTRA FAMILIA</span>
+      <p>¿Conoces a una familia que debería vivir esto? Envíale la invitación.</p>
+      <a class="wa" id="shareWa" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.3-1.5-.6-.6-1-1.2-1.2-1.6-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 2.2.9 2.6.7 3.1.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg>
+        ENVIAR INVITACIÓN POR WHATSAPP
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="vt"><img src="__IMG_sello__" alt="">INVITA COLEGIO VÉRITAS</div>
+  <div><b style="color:var(--gold-light)">Educar con alma</b> · 1er Congreso sobre Familia y Crianza Católica · Lunes 16 de noviembre · Teatro Valerio Antonio, Marinilla</div>
+  <a class="credit" href="https://jgg-ia.github.io/portafolio/" target="_blank" rel="noopener">
+    <img src="__IMG_jg__" alt="Logo JG"><span>Desarrollado por <b>Julián García</b></span>
+  </a>
+</footer>
+
+<script>
+const VID = "__VID__";
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// ---- reproducir: cambia la portada por el video de YouTube ----
+const player = document.getElementById("player"), cover = document.getElementById("cover");
+function play() {
+  const f = document.createElement("iframe");
+  f.src = `https://www.youtube.com/embed/${VID}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+  f.title = "Transmisión en vivo · Educar con alma";
+  f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen";
+  f.allowFullscreen = true;
+  cover.replaceWith(f);
+}
+cover.addEventListener("click", play);
+cover.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); play(); } });
+// si no hay miniatura grande, usa la normal
+const t = new Image(); t.onload = () => { if (t.naturalWidth <= 120) cover.style.backgroundImage = `url('https://img.youtube.com/vi/${VID}/hqdefault.jpg')`; };
+t.src = `https://img.youtube.com/vi/${VID}/maxresdefault.jpg`;
+
+// ---- pantalla completa ----
+document.getElementById("fs").addEventListener("click", () => {
+  if (!player.querySelector("iframe")) play();
+  const el = player; (el.requestFullscreen || el.webkitRequestFullscreen || (() => {})).call(el);
+});
+
+// ---- compartir por WhatsApp (envía el enlace de esta página) ----
+document.getElementById("shareWa").href = "https://wa.me/?text=" + encodeURIComponent("Te invito al Congreso *Educar con alma* 💛 1er Congreso sobre Familia y Crianza Católica · Lunes 16 de noviembre. Inscríbete aquí: https://jgg-ia.github.io/EducarConALMA/");
+
+// ---- estado: cuenta regresiva hasta el inicio / EN VIVO ----
+const start = new Date("2026-11-16T08:00:00-05:00").getTime(), end = new Date("2026-11-16T16:30:00-05:00").getTime();
+const st = document.getElementById("status");
+const tag = document.getElementById("tag");
+function status() {
+  const now = Date.now();
+  if (tag) tag.innerHTML = now < start ? '<span class="live" style="background:#13294D;border:2px solid #C9973F;box-shadow:none">PRÓXIMAMENTE</span>'
+    : now <= end ? '<span class="live"><span class="dot"></span>EN VIVO</span>' : '<span class="live" style="background:#13294D;border:2px solid #C9973F;box-shadow:none">GRABACIÓN</span>';
+  if (now >= start && now <= end) { st.innerHTML = '<span class="live"><span class="dot"></span>TRANSMITIENDO EN VIVO</span>'; return; }
+  if (now > end) { st.innerHTML = '<span class="live" style="background:#13294D;border:2px solid #C9973F;box-shadow:none">GRACIAS POR ACOMPAÑARNOS · MIRA LA GRABACIÓN</span>'; return; }
+  let s = Math.floor((start - now) / 1000);
+  const d = Math.floor(s / 86400); s %= 86400; const h = Math.floor(s / 3600); s %= 3600; const m = Math.floor(s / 60); s %= 60;
+  const p = n => String(n).padStart(2, "0");
+  st.innerHTML = `<div class="soon"><small>LA TRANSMISIÓN COMIENZA EN</small><div class="count">
+    <div><b>${p(d)}</b><span>DÍAS</span></div><div><b>${p(h)}</b><span>HORAS</span></div><div><b>${p(m)}</b><span>MIN</span></div><div><b>${p(s)}</b><span>SEG</span></div></div></div>`;
+}
+status(); setInterval(status, 1000);
+
+// ---- destellos dorados de fondo ----
+const cv = document.getElementById("sparks"), cx = cv.getContext("2d"); let W, H, P = [];
+function size() { W = cv.width = innerWidth * devicePixelRatio; H = cv.height = innerHeight * devicePixelRatio; }
+size(); addEventListener("resize", size);
+for (let i = 0; i < 50; i++) P.push({ x: Math.random(), y: Math.random(), r: Math.random() * 2 + .5, v: Math.random() * .0008 + .0003, p: Math.random() * 6.28 });
+(function draw(t) {
+  cx.clearRect(0, 0, W, H);
+  for (const s of P) {
+    if (!reduce) { s.y -= s.v; if (s.y < -.02) { s.y = 1.02; s.x = Math.random(); } }
+    const a = .25 + .4 * Math.sin(t / 700 + s.p), x = s.x * W, y = s.y * H, r = s.r * devicePixelRatio;
+    cx.fillStyle = `rgba(239,208,142,${a})`; cx.beginPath(); cx.moveTo(x, y - r * 3); cx.lineTo(x + r, y); cx.lineTo(x, y + r * 3); cx.lineTo(x - r, y); cx.closePath(); cx.fill();
+  }
+  requestAnimationFrame(draw);
+})(0);
+</script>
+</body>
+</html>
